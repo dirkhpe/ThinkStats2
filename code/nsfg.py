@@ -5,9 +5,9 @@ Copyright 2010 Allen B. Downey
 License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
 """
 
-from __future__ import print_function, division
+# from __future__ import print_function, division
 
-import sys
+# import sys
 import numpy as np
 import thinkstats2
 
@@ -26,11 +26,11 @@ def ReadFemResp(dct_file='2002FemResp.dct',
     """
     dct = thinkstats2.ReadStataDct(dct_file)
     df = dct.ReadFixedWidth(dat_file, compression='gzip', nrows=nrows)
-    CleanFemResp(df)
+    CleanFemResp()
     return df
 
 
-def CleanFemResp(df):
+def CleanFemResp():
     """Recodes variables from the respondent frame.
 
     df: DataFrame
@@ -157,7 +157,6 @@ def main():
     # of entries in `preg`
     assert(ValidatePregnum(resp, preg))
 
-    
     print('All tests passed.')
 
 
