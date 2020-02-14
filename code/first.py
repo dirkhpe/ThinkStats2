@@ -7,7 +7,7 @@ License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
 
 from __future__ import print_function
 
-import math
+# import math
 import numpy as np
 
 import nsfg
@@ -144,7 +144,7 @@ def MakeComparison(firsts, others):
                    axis=[27, 46, 0, 2700])
 
 
-def main(script):
+def main():
     live, firsts, others = MakeFrames()
 
     MakeHists(live)
@@ -154,7 +154,4 @@ def main(script):
 
 
 if __name__ == '__main__':
-    import sys
-    main(*sys.argv)
-
-
+    main()
